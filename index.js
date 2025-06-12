@@ -1,3 +1,4 @@
+
 //Misión:
 
 // Crea un nuevo proyecto con el comando npm init -y para generar un archivo package.json básico.
@@ -12,7 +13,6 @@
 // Configura un servidor básico que corra en el puerto 3000 usando Express.
 // Agrega una ruta /ping que responda con el texto plano “/pong” cuando sea visitada desde un navegador.
 
-
 import express from 'express';
 const app = express();
 const PORT = 3000;
@@ -22,3 +22,4 @@ app.get('/ping', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+

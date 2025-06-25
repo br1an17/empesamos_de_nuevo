@@ -29,3 +29,25 @@ fetch(url)
     .finally(() => {        
         console.log('Fetch attempt finished.');
     });         
+
+
+// Misión 2: Usando async/await                 
+
+async function fetchCharacters() {  
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const characters = data.results.slice(0, 5);
+        console.log(characters);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    } finally {
+        console.log('Fetch attempt finished.');
+    }
+}       
+
+// Llamada a la función asíncrona
+fetchCharacters();      
